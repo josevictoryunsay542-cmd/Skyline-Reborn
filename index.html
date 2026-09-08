@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyline Reborn — v0.1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+  <header>
+    <div>
+      <div class="eyebrow">SKYLINE NETWORK // RUNNER GUILD</div>
+      <h1>SKYLINE REBORN</h1>
+      <p class="tagline">RUN. REACH. REBUILD.</p>
+    </div>
+    <button id="restartBtn">RESTART RUN</button>
+  </header>
+
+  <main>
+    <section class="hud">
+      <div class="stat"><span>HP</span><div class="bar"><i id="hpBar"></i></div><b id="hpText">100/100</b></div>
+      <div class="stat"><span>STAMINA</span><div class="bar"><i id="staminaBar"></i></div><b id="staminaText">100/100</b></div>
+      <div class="stat"><span>STRESS</span><div class="bar danger"><i id="stressBar"></i></div><b id="stressText">0/100</b></div>
+      <div class="stat"><span>MOMENTUM</span><div class="momentum" id="momentumDots">○ ○ ○ ○ ○</div></div>
+      <div class="credits">¢ <span id="credits">250</span></div>
+    </section>
+
+    <section class="game-layout">
+      <div class="world-panel">
+        <div class="mission">
+          <span class="pill">ACTIVE JOB</span>
+          <h2 id="missionTitle">The First Delivery</h2>
+          <p id="missionText">Carry the medical package to Relay Station 04. Reach the green beacon.</p>
+        </div>
+
+        <canvas id="gameCanvas" width="900" height="500"></canvas>
+
+        <div class="controls">
+          <span><kbd>A</kbd><kbd>D</kbd> MOVE</span>
+          <span><kbd>SPACE</kbd> JUMP</span>
+          <span><kbd>SHIFT</kbd> SLIDE</span>
+          <span><kbd>F</kbd> GRAPPLER</span>
+          <span><kbd>E</kbd> INTERACT</span>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>RUNNER PROFILE</h3>
+          <p><strong>RANK</strong><span>Rookie Runner</span></p>
+          <p><strong>MASK</strong><span>Tier 1 Respirator</span></p>
+          <p><strong>BOOTS</strong><span>Mag Boots</span></p>
+          <p><strong>PACK</strong><span>1/3 Cargo</span></p>
+        </div>
+
+        <div class="card">
+          <h3>ROUTE STATUS</h3>
+          <p><strong>LAYER</strong><span>Lower Middle</span></p>
+          <p><strong>PALE</strong><span id="paleStatus">Light</span></p>
+          <p><strong>GRAPPLER</strong><span id="grappleText">3/3</span></p>
+          <p><strong>FLOW</strong><span id="flowText">Stalled</span></p>
+        </div>
+
+        <div class="card log-card">
+          <h3>RUNNER LOG</h3>
+          <div id="log"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="modal">
+      <div id="overlayIcon">✓</div>
+      <h2 id="overlayTitle">DELIVERY COMPLETE</h2>
+      <p id="overlayText"></p>
+      <button id="continueBtn">CONTINUE</button>
+    </div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
