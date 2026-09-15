@@ -2,7 +2,7 @@ const canvas=document.getElementById("gameCanvas"),ctx=canvas.getContext("2d");
 const W=canvas.width,H=canvas.height;
 const keys={}; let state, last=performance.now(), won=false;
 const runnerSprite = new Image();
-runnerSprite.src = "assets/runner.png";
+runnerSprite.src = "runnerSprite.png";
 
 const platforms=[
  {x:0,y:430,w:210,h:70},{x:265,y:365,w:150,h:18},{x:470,y:300,w:135,h:18},
