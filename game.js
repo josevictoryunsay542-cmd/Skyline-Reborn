@@ -1,6 +1,8 @@
 const canvas=document.getElementById("gameCanvas"),ctx=canvas.getContext("2d");
 const W=canvas.width,H=canvas.height;
 const keys={}; let state, last=performance.now(), won=false;
+const runnerSprite = new Image();
+runnerSprite.src = "assets/runner.png";
 
 const platforms=[
  {x:0,y:430,w:210,h:70},{x:265,y:365,w:150,h:18},{x:470,y:300,w:135,h:18},
@@ -98,11 +100,13 @@ function draw(){
  ctx.fillStyle="#69e3c4";ctx.fillRect(beacon.x,beacon.y,beacon.w,beacon.h);ctx.fillStyle="rgba(105,227,196,.15)";ctx.fillRect(beacon.x-25,beacon.y-25,75,110);
  ctx.fillStyle="#c4fff1";ctx.font="bold 11px Arial";ctx.fillText("RELAY 04",beacon.x-8,beacon.y-10);
  // runner
- ctx.save();ctx.translate(state.x,state.y);
- ctx.fillStyle="#d7eceb";ctx.fillRect(7,8,13,17);ctx.fillStyle="#69e3c4";ctx.fillRect(5,4,17,9);
- ctx.fillStyle="#c4fff1";ctx.fillRect(8,0,11,8);ctx.fillStyle="#69e3c4";ctx.fillRect(4,25,7,17);ctx.fillRect(15,25,7,17);
- ctx.fillStyle="#29444c";ctx.fillRect(2,39,10,3);ctx.fillRect(15,39,10,3);
- ctx.restore();
+ctx.drawImage(
+  runnerSprite,
+  state.x,
+  state.y,
+  state.w,
+  state.h
+);
 }
 function loop(t){const dt=Math.min(.033,(t-last)/1000);last=t;update(dt);draw();requestAnimationFrame(loop)}
 reset();requestAnimationFrame(loop);
