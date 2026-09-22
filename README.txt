@@ -1,40 +1,21 @@
-SKYLINE REBORN — v0.1
-========================
+SKYLINE REBORN v0.2
+Middle Layer — Residential Block 01: The Courtyard
 
-A small browser prototype based on the Pale Air / Skyline Network lore.
+This build establishes the first real residential map.
 
-FILES
-- index.html  Game interface
-- style.css   Visual design
-- game.js     Gameplay
+Files:
+- index.html
+- style.css
+- game.js
+- assets/runner.png (optional custom transparent sprite)
 
-HOW TO PLAY
-1. Keep all three files in the same folder.
-2. Double-click index.html to open it in a browser.
-3. Use A/D (or arrow keys) to move.
-4. SPACE jumps.
-5. SHIFT slides.
-6. F uses the Tier 2 grappler.
-7. E interacts with the Relay 04 beacon.
+Put your custom sprite at assets/runner.png. The game automatically uses it when present.
 
-CURRENT SYSTEMS
-- Runner movement
-- Platforms and route hazards
-- Stamina
-- Stress
-- Momentum / Flow
-- Tier 1 Runner Mask, Mag Boots, Sling Pack
-- Tier 2 Grappler
-- Delivery mission
-- Credits and mission reward
-- Skyline-themed UI
+Controls:
+A/D or Arrow Keys = Move
+Space/W/Up = Jump
+Shift = Slide
+F = Grappler
+R = Restart
 
-NEXT BUILD IDEAS
-- Actual multi-room Skyline map
-- d20 checks and Flow Dice
-- Inventory and equipment screen
-- Pale Storm events
-- NPCs and Runner Guild
-- Multiple missions
-- Character creation
-- More advanced parkour
+The map is intentionally data-driven so Residential Blocks 02–04 can be added later.
