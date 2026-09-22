@@ -7,8 +7,8 @@ const keys={};
 const state={
              x:130,
              y:570,
-             w:30,
-             h:54,
+             w:20,
+             h:44,
              vx:0,
              vy:0,
              onGround:false,
@@ -221,8 +221,8 @@ function drawRunner(){
   
   if(runnerSprite.complete&&runnerSprite.naturalWidth){
     
-    const sw=state.sliding?48:52,
-      sh=state.sliding?42:72;
+    const sw=state.sliding?41:45,
+      sh=state.sliding?36:66;
     ctx.save();
     
     if(state.facing<0){
